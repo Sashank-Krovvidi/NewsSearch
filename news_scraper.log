@@ -1,0 +1,95 @@
+WARNING:root:No news data extracted.
+WARNING:root:No news data extracted.
+INFO:root:News data successfully saved to news_data_2024-01-08_09-16-27.json
+WARNING:root:No news data extracted.
+INFO:root:News data successfully saved to news_data_2024-01-08_09-23-26.json
+INFO:root:News data successfully saved to news_data_2024-01-08_11-01-47.json
+INFO:root:News data successfully saved to news_data_2024-01-08_11-07-49.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+ERROR:root:An error occurred: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 32, in scrape_and_store_news
+    news_data.add({'title': title, 'link': link, 'timestamp': timestamp})
+TypeError: unhashable type: 'dict'
+ERROR:root:An error occurred: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 54, in scrape_and_store_news
+    title_link_tuple = (entry['title'], entry['link'])
+TypeError: list indices must be integers or slices, not str
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+ERROR:root:An error occurred: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 46, in scrape_and_store_news
+    existing_news_data = json.load(existing_file)
+  File "/usr/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:root:All news data successfully saved to all_news_data.json
+ERROR:root:An error occurred: name 'unique_news_data' is not defined
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 55, in scrape_and_store_news
+    json.dump(unique_news_data, file, ensure_ascii=False, indent=2)
+NameError: name 'unique_news_data' is not defined
+ERROR:root:An error occurred: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 45, in scrape_and_store_news
+    existing_news_data = json.load(existing_file)
+  File "/usr/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+ERROR:root:An error occurred: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 55, in scrape_and_store_news
+    title_link_tuple = (entry['title'], entry['link'])
+TypeError: list indices must be integers or slices, not str
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+INFO:root:All news data from page 2 successfully saved to all_news_data.json
+INFO:root:All news data from page 4 successfully saved to all_news_data.json
+INFO:root:All news data from page 5 successfully saved to all_news_data.json
+INFO:root:All news data successfully saved to all_news_data.json
+ERROR:root:An error occurred: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 29, in scrape_and_store_news
+    link = article.find('a')['href']
+TypeError: 'NoneType' object is not subscriptable
+INFO:root:All news data from https://indianexpress.com/section/entertainment/ successfully saved to all_news_data.json
+ERROR:root:An error occurred: 404 Client Error: Not Found for url: https://example.com/another-section
+Traceback (most recent call last):
+  File "/home/sashank/Desktop/News/news_scraper.py", line 17, in scrape_and_store_news
+    response.raise_for_status()  # Raise an exception for bad responses
+  File "/home/sashank/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://example.com/another-section
+INFO:root:All news data from https://indianexpress.com successfully saved to all_news_data.json
+INFO:root:All news data from https://indianexpress.com/section/cities/ successfully saved to all_news_data.json
+INFO:root:All news data from https://indianexpress.com/section/india/ successfully saved to all_news_data.json
+WARNING:root:No unique news data extracted from https://indianexpress.com/section/explained/.
+INFO:root:All news data from https://indianexpress.com/section/business/ successfully saved to all_news_data.json
+INFO:root:All news data from https://indianexpress.com/section/entertainment/ successfully saved to all_news_data.json
+INFO:root:All news data from https://indianexpress.com/section/sports/ successfully saved to all_news_data.json
+INFO:root:All news data from https://indianexpress.com/section/political-pulse/ successfully saved to all_news_data.json
+INFO:root:All news data from https://indianexpress.com/section/lifestyle/ successfully saved to all_news_data.json
+WARNING:root:No unique news data extracted from https://indianexpress.com/section/technology/.
+WARNING:root:No unique news data extracted from https://indianexpress.com/section/research/.

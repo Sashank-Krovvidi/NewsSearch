@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>  News Search  </h1>
+
+        <div>
+            <form action="/search" method="post">
+                <label for="query">Search:</label>
+                <input type="text" id="query" name="query" placeholder="What do you want to know?" required>
+                <button type="submit"><strong>Search</strong></button>
+            </form>
+
+            <h2>Latest News:</h2>
+            <ul>
+                {% for entry in latest_entries %}
+                    <li>
+                        <strong>Title:</strong> <a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a><br>
+                        <strong>Description:</strong> <span style="font-style: italic;">{{ entry.description }}</span><br>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
